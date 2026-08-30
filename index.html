@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Exam</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        table,
+        tr,
+        td {
+            border: none;
+            font-style: Fixedsys;
+        }
+
+        h3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            background-color: bisque;
+        }
+
+        .main {
+            width: 70%;
+            border: 3px dashed brown;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pic {
+            height: 40px;
+            width: 80px;
+            /* align-self: flex-end; */
+            margin-left: 50vw;
+
+        }
+
+        .scroll {
+            color: red;
+
+        }
+
+        button {
+            padding: 2px;
+            border: 3px solid blue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3> Online Examination platform for
+            E.Rly employees</h3>
+
+        <img src="resize4.jpg" alt="Aces Logo" class="pic">
+
+        <marquee behavior="alt" direction="alt">
+            <h4>ACES Infotech online exam platform</h4>
+        </marquee>
+
+        <h3><b><u> Please read the instructons carefully before clicking begin</u></b></h3>
+        <table>
+            <tr>
+                <td>1.</td>
+                <td>All questions are compulsory</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Each question carries 1 mark</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Select the most appropriate answer</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>There is no negative marking</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>All questions are compulsory</td>
+            </tr>
+
+        </table>
+        <button id="submit">Begin</button>
+    </div>
+    <script>
+        document.getElementById("submit").onclick = function () {
+            window.location.href = "form.html";
+        };
+    </script>
+</body>
+
+</html>
