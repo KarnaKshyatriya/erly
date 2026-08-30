@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScDlnn5nMVEz9_0QddfeEn7IM89kJH-dBO3kgXV0urU7U9uHw/viewform?embedded=true"
+        width="640" height="6453" frameborder="0" marginheight="0" marginwidth="0" id="" mm">Loading…</iframe>
+    <script>
+        const iframe = document.getElementById("mm");
+
+        let loaded = false;
+
+        iframe.addEventListener("load", function () {
+
+            if (loaded) {
+                // Form has been submitted
+                window.location.href = "hello.html";
+            }
+
+            loaded = true;
+
+        });
+    </script>
+</body>
+
+</html>
