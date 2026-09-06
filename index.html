@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
     <title>MCQ Exam</title>
     <style>
         body {
@@ -56,6 +57,73 @@
             border: 3px solid blue;
             font-size: 30px;
         }
+
+.button-container {
+    position: relative;
+    display: inline-block;
+    margin: 100px;
+}
+
+#submit {
+    padding: 15px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.floating-circle {
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    animation: wander 5s infinite ease-in-out;
+}
+
+@keyframes wander {
+
+    0% {
+        transform: translate(-20px, -20px);
+    }
+
+    20% {
+        transform: translate(120px, -30px);
+    }
+
+    40% {
+        transform: translate(160px, 30px);
+    }
+
+    60% {
+        transform: translate(100px, 70px);
+    }
+
+    80% {
+        transform: translate(-30px, 50px);
+    }
+
+    100% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+}
+
+
     </style>
 </head>
 
@@ -94,7 +162,10 @@
             </tr>
 
         </table>
-        <button id="submit">Begin</button>
+        <div class="button-container">
+    <button id="submit">Begin</button>
+    <div class="floating-circle"></div>
+</div>
     </div>
     <script>
         document.getElementById("submit").onclick = function () {
